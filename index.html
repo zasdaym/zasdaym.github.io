@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
 <title>zasdaym</title>
-<meta name=description content>
+<meta name=description content="Blog of zasdaym">
 <meta name=author content>
 <link rel=canonical href=https://zasdaym.github.io/>
 <link crossorigin=anonymous href=/assets/css/stylesheet.min.35cd0f65a15cafa92372b8313deef5960aae04b90ad722f2bbf509eb0468137e.css integrity="sha256-Nc0PZaFcr6kjcrgxPe71lgquBLkK1yLyu/UJ6wRoE34=" rel="preload stylesheet" as=style>
@@ -17,14 +17,15 @@
 <meta name=msapplication-TileColor content="#2e2e33">
 <meta name=generator content="Hugo 0.86.0">
 <link rel=alternate type=application/rss+xml href=https://zasdaym.github.io/index.xml>
+<link rel=alternate type=application/json href=https://zasdaym.github.io/index.json>
 <meta property="og:title" content="zasdaym">
-<meta property="og:description" content>
+<meta property="og:description" content="Blog of zasdaym">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zasdaym.github.io/">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="zasdaym">
-<meta name=twitter:description content>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"zasdaym","url":"https://zasdaym.github.io/","description":"","thumbnailUrl":"https://zasdaym.github.io/favicon.ico","sameAs":[]}</script>
+<meta name=twitter:description content="Blog of zasdaym">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"zasdaym","url":"https://zasdaym.github.io/","description":"Blog of zasdaym","thumbnailUrl":"https://zasdaym.github.io/favicon.ico","sameAs":[]}</script>
 </head>
 <body class=list id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -42,18 +43,47 @@
 </span>
 </div>
 <ul id=menu>
+<li>
+<a href=https://zasdaym.github.io/search/ title="Search (Alt + /)" accesskey=/>
+<span>Search</span>
+</a>
+</li>
 </ul>
 </nav>
 </header>
 <main class=main>
-<article class=first-entry>
+<article class="first-entry home-info">
+<header class=entry-header>
+<h1>Blog of zasdaym</h1>
+</header>
+<section class=entry-content>
+<p></p>
+</section>
+<footer class=entry-footer>
+<div class=social-icons>
+</div>
+</footer>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Bash script</h2>
+</header>
+<section class=entry-content>
+<p>For some small tasks, sometimes Bash script (shell script in general) is better than a full-blown program using programming languages. Here’s some personal tips to write a Bash script:
+Exit on fail Use set -o errexit to make the script exit when it fails. If some commands are allowed to fail, command1 || echo "command1 is failed, but continuing" can be used.
+Prevent access to undeclared variables Use set -o nounset to exit when the script tries to use undeclared variables....</p>
+</section>
+<footer class=entry-footer></footer>
+<a class=entry-link aria-label="post link to Bash script" href=https://zasdaym.github.io/posts/bash-script/></a>
+</article>
+<article class=post-entry>
 <header class=entry-header>
 <h2>Γειά σου Κόσμε!</h2>
 </header>
 <section class=entry-content>
 <p>Γειά σου Κόσμε!</p>
 </section>
-<footer class=entry-footer>July 24, 2021</footer>
+<footer class=entry-footer></footer>
 <a class=entry-link aria-label="post link to Γειά σου Κόσμε!" href=https://zasdaym.github.io/posts/hello-world/></a>
 </article>
 </main>

@@ -1,4 +1,16 @@
 baseURL: https://zasdaym.github.io/
 languageCode: en-us
 title: zasdaym
+description: Blog of zasdaym
 theme: papermod
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+params:
+  env: production
+  description: Blog of zasdaym
+  homeInfoParams:
+    Title: Blog of zasdaym
+  ShowCodeCopyButtons: true

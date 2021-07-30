@@ -1,5 +1,6 @@
 ---
-title: "Bash script"
+title: "Bash script tips"
+date: 2021-07-20T17:03:22+07:00
 draft: false
 ---
 
@@ -10,7 +11,7 @@ Use `set -o errexit` to make the script exit when it fails. If some commands are
 
 ## Prevent access to undeclared variables
 Use `set -o nounset` to exit when the script tries to use undeclared variables. Imagine running this command when undeclared variables is allowed:
-```
+```bash
 rm -rf ${base_folder}/*
 ```
 
@@ -25,17 +26,17 @@ In short, it means that idempotent Bash scripts should have the same effects on 
 
 ### Creating a symbolic link
 The basic syntax of creating a symbolic link is:
-```
+```bash
 ln -s source target
 ```
 
 This is not idempotent, it will fail in the second run because the target is already exists. It can be solved by adding the `-f` flag:
-```
+```bash
 ln -sf source target
 ```
 
 If executed multiple times, it's still not idempotent because it will create a symbolic link inside the previously created symbolic link (nested). The idempotent way to create a symbolic link is:
-```
+```bash
 ln -sfn source target
 ```
 
@@ -44,21 +45,21 @@ The command `rm filename` will fail if the file is not exists, use `rm -f` inste
 
 ## Check if a file exists
 Common usage is to download a file if only its not exist:
-```
+```bash
 if [[ ! -f ${HOME}/.local/bin/random_binary ]]; then
   wget -qO ${HOME}/.local/bin/random_binary https://randomsite.com/random_binary
 fi
 ```
 
-## Use curly brace to access variables
+## Use curly brace to when using variables
 When using variables inside a string, sometimes it's clearer to access the variable with the curly brace. So instead of this:
-```
-echo "$var1$var2$var3"
+```bash
+echo "$var1_new.yaml"
 ```
 
 Prefer this:
-```
-echo "${var1}${var2}${var3}"
+```bash
+echo "${var1}_new.yaml"
 ```
 
-For special variables like `$1` or `$@`, prefer without the curly braces.
+So it's clear that the variable name is `var1`, not `var1_new`.

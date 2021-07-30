@@ -66,6 +66,18 @@
 </article>
 <article class=post-entry>
 <header class=entry-header>
+<h2>YAML processing with yq</h2>
+</header>
+<section class=entry-content>
+<p>Nowadays many configurations are done via YAML format. GitLab CI, GitHub Actions, Hugo, Docker compose, and of course Kubernetes. A YAML processor like yq will be useful when working with tools like kubectl that can output YAML.
+Basic features For examples in basic features section, we use a file deployment.yaml with the following content:
+apiVersion: v1 kind: Deployment metadata: name: hello-world spec: template: spec: containers: - name: hello image: hello:v0.0.1 - name: world image: world:v0....</p>
+</section>
+<footer class=entry-footer>July 27, 2021</footer>
+<a class=entry-link aria-label="post link to YAML processing with yq" href=https://zasdaym.github.io/posts/yq/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Bash script tips</h2>
 </header>
 <section class=entry-content>

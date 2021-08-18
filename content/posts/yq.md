@@ -38,7 +38,7 @@ yq e '.spec.template.spec.containers[].image' deployment.yaml
 ### Delete field
 To delete the first container, use:
 ```bash
-yq e 'delete(.spec.template.spec.containers[0])' deployment.yaml
+yq e 'del(.spec.template.spec.containers[0])' deployment.yaml
 ```
 
 ### Update field

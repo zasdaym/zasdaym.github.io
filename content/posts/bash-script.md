@@ -51,7 +51,7 @@ if [[ ! -f ${HOME}/.local/bin/random_binary ]]; then
 fi
 ```
 
-## Use curly brace to when using variables
+## Use curly brace when using variable inside a string
 When using variables inside a string, sometimes it's clearer to access the variable with the curly brace. So instead of this:
 ```bash
 echo "$var1_new.yaml"

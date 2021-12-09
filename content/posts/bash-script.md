@@ -41,10 +41,10 @@ ln -sfn source target
 ```
 
 ### Removing a file
-The command `rm filename` will fail if the file is not exists, use `rm -f` instead. To remove folder, use `rm -rf`.
+The command `rm filename` will fail if the file does not exist. Use `rm -f` instead. To remove directory, use `rm -rf` instead.
 
-## Check if a file exists
-Common usage is to download a file if only its not exist:
+### Downloading a file
+Common usage is to download a file if only it does not exist:
 ```bash
 if [[ ! -f ${HOME}/.local/bin/random_binary ]]; then
   wget -qO ${HOME}/.local/bin/random_binary https://randomsite.com/random_binary

@@ -4,7 +4,7 @@ date: 2021-07-20T17:03:22+07:00
 draft: false
 ---
 
-For some small tasks, sometimes Bash script (shell script in general) is better than a full-blown program using programming languages. Here's some personal tips to write a Bash script:
+For some small tasks, sometimes Bash script (shell script in general) is better than a full-blown program using programming languages. Here are some personal tips to write a Bash script:
 
 ## Exit on fail
 Use `set -o errexit` to make the script exit when it fails. If some commands are allowed to fail, `command1 || echo "command1 is failed, but continuing"` can be used.
